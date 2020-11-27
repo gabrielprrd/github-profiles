@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
+
+// Components
 import TextInput from '../components/TextInput';
+import SubmitButton from '../components/SubmitButton';
 
 const Home: React.FC = () => {
   const [query, setquery] = useState('');
@@ -9,20 +12,22 @@ const Home: React.FC = () => {
     setquery(e.target.value);
   };
 
-  useEffect((): void => {
-    console.log(query);
-  }, [query]);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
 
   return (
     <>
       <Head>
-        func
         <title>Homepage</title>
       </Head>
 
       <main>
         <h1>Hello World</h1>
-        <TextInput placeholder="Type an username" onChange={handleChange} />
+        <form onSubmit={handleSubmit}>
+          <TextInput placeholder="Type an username" onChange={handleChange} />
+          <SubmitButton>Search</SubmitButton>
+        </form>
       </main>
     </>
   );
