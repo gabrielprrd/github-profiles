@@ -3,8 +3,11 @@ Keeps track of the necessary tasks to complete the challenge.
     ✔ Change name and insert author @done(20-11-27 02:02)
     ✔ Fix error of importing ts files on the airbnb standard @done(20-11-27 01:53)
     ✔ Check if styled-components is working properly with next.js @done(20-11-27 02:02)
-    ☐ Initial commit following Conventional Commits
+    ✔ Initial commit following Conventional Commits @done(20-11-27 18:27)
     ☐ Modify styled-components theme to fit the style-guide.md
+    ☐ Add footer
+    ☐ Style the app
+    ☐ Add page transition (maybe like this https://codepen.io/jcoulterdesign/pen/vqOyLr)
 
 User Stories
     ☐ User can enter a username
@@ -15,4 +18,4 @@ User Stories
 
 Bonus features
     ☐ User can toggle dark/light mode
-    ☐ Selected mode should persist when user comes back to the app again
+    ☐ Selected mode should persist when user comes back to the app again (Local Storage)
