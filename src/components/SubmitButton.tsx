@@ -1,7 +1,11 @@
 import React from 'react';
 
-const SubmitButton: React.FC = () => (
-  <button type="submit" aria-label="submit button" />
+interface Props {
+  value: string;
+}
+
+const SubmitButton: React.FC<Props> = ({ value }: Props) => (
+  <input type="submit" aria-label="submit button" value={value} />
 );
 
 export default SubmitButton;

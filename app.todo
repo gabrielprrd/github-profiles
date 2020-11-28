@@ -8,10 +8,11 @@ Keeps track of the necessary tasks to complete the challenge.
     ☐ Add footer
     ☐ Style the app
     ☐ Add page transition (maybe like this https://codepen.io/jcoulterdesign/pen/vqOyLr)
+    ☐ Turn the user result into a static render page.
 
 User Stories
-    ☐ User can enter a username
-    ☐ User can click on search button to retrieve information
+    ✔ User can enter a username @done(20-11-27 20:59)
+    ✔ User can click on search button to retrieve information @done(20-11-28 15:04)
     ☐ User can see the avatar, username, followers and repository count of searched user
     ☐ User can see the top 4 repositories of searched user
     ☐ User should get an alert if the username is not valid
