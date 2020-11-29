@@ -7,20 +7,11 @@ import UserPage from './user';
 // Components
 import TextInput from '../components/TextInput';
 import SubmitButton from '../components/SubmitButton';
-import useFetch from '../hooks/useFetch';
-
-export interface User {
-  name: string;
-  login: string;
-  avatar_url: string;
-  followers: number;
-  public_repos: number;
-}
 
 const Home: React.FC = () => {
   const [query, setQuery] = useState<string>('');
+  const [submittedQuery, setSubmittedQuery] = useState<string>('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const { userData } = useFetch<User>(`https://api.github.com/users/${query}`);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -28,6 +19,7 @@ const Home: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmittedQuery(query);
     setIsSubmitted(true);
   };
 
@@ -43,15 +35,7 @@ const Home: React.FC = () => {
           <SubmitButton value="Search" />
         </form>
 
-        {isSubmitted && (
-          <UserPage
-            name={userData.name}
-            login={userData.login}
-            avatarUrl={userData.avatar_url}
-            followers={userData.followers}
-            repositories={userData.public_repos}
-          />
-        )}
+        {isSubmitted && <UserPage query={submittedQuery} />}
       </main>
     </>
   );
