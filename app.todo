@@ -18,5 +18,5 @@ User Stories
     ✔ User should get an alert if the username is not valid @done(20-11-30 18:39)
 
 Bonus features
-    ☐ User can toggle dark/light mode
+    ☐ User can toggle dark/light mode (Header)
     ☐ Selected mode should persist when user comes back to the app again (Local Storage)
