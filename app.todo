@@ -14,8 +14,8 @@ User Stories
     ✔ User can enter a username @done(20-11-27 20:59)
     ✔ User can click on search button to retrieve information @done(20-11-28 15:04)
     ✔ User can see the avatar, username, followers and repository count of searched user @done(20-11-28 17:49)
-    ☐ User can see the top 4 repositories of searched user
-    ☐ User should get an alert if the username is not valid
+    ✔ User can see the top 4 repositories of searched user @done(20-11-30 03:30)
+    ✔ User should get an alert if the username is not valid @done(20-11-30 18:39)
 
 Bonus features
     ☐ User can toggle dark/light mode

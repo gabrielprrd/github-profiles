@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface Props {
   placeHolder: string;
@@ -6,7 +6,7 @@ interface Props {
 }
 
 const TextInput: React.FC<Props> = ({ onChange, placeHolder }) => (
-  <input type="text" onChange={onChange} placeholder={placeHolder} />
+  <input type="text" onChange={onChange} placeholder={placeHolder} required />
 );
 
 export default TextInput;

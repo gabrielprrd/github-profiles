@@ -16,10 +16,12 @@ const UserTopFourRepos: React.FC<{ query: string }> = ({ query }): any => {
   // Gets top four repositories based on stars
   useEffect(() => {
     if (data !== undefined) {
-      const repositories = data
-        .sort((repo1, repo2) => repo1.watchers - repo2.watchers)
-        .filter((repo, index) => index < 4);
-      setTopFourRepos(repositories);
+      if (data.message !== 'Not Found') {
+        const repositories = data
+          .sort((repo1, repo2) => repo1.watchers - repo2.watchers)
+          .filter((repo, index) => index < 4);
+        setTopFourRepos(repositories);
+      }
     }
   }, [data]);
 
