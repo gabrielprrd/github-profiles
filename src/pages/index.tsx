@@ -31,7 +31,7 @@ const Home: React.FC = () => {
 
       <main>
         <form onSubmit={handleSubmit}>
-          <TextInput placeholder="Type an username" onChange={handleChange} />
+          <TextInput placeHolder="Type an username" onChange={handleChange} />
           <SubmitButton value="Search" />
         </form>
 
