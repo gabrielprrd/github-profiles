@@ -9,7 +9,7 @@ export default function useFetch<Data = any, Error = any>(url: string): any {
     return json;
   });
   return {
-    userData: data,
+    data,
     isLoading: !error && !data,
     isError: error,
   };
