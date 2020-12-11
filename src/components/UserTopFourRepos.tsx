@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import useFetch from '../hooks/useFetch';
+
+// Context
+import { QueryContext } from '../context/QueryProvider';
 
 interface Repository {
   name: string;
@@ -7,8 +10,9 @@ interface Repository {
   watchers: number;
 }
 
-const UserTopFourRepos: React.FC<{ query: string }> = ({ query }): any => {
+const UserTopFourRepos: React.FC = (): any => {
   const [topFourRepos, setTopFourRepos] = useState<Repository[]>([]);
+  const { query } = useContext(QueryContext);
   const { data } = useFetch<Repository[]>(
     `https://api.github.com/users/${query}/repos`
   );

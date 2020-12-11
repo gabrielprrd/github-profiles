@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Head from 'next/head';
 
 // Pages
@@ -8,18 +8,21 @@ import UserPage from './user';
 import TextInput from '../components/TextInput';
 import SubmitButton from '../components/SubmitButton';
 
+// Context
+import { QueryContext } from '../context/QueryProvider';
+
 const Home: React.FC = () => {
-  const [query, setQuery] = useState<string>('');
-  const [submittedQuery, setSubmittedQuery] = useState<string>('');
+  const [queryOnInput, setQueryOnInput] = useState<string>('');
+  const { setQuery } = useContext(QueryContext);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
+    setQueryOnInput(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmittedQuery(query);
+    setQuery(queryOnInput);
     setIsSubmitted(true);
   };
 
@@ -32,10 +35,10 @@ const Home: React.FC = () => {
       <main>
         <form onSubmit={handleSubmit}>
           <TextInput placeHolder="Type an username" onChange={handleChange} />
-          <SubmitButton value="Search" />
+          <SubmitButton label="search" />
         </form>
 
-        {isSubmitted && <UserPage query={submittedQuery} />}
+        {isSubmitted && <UserPage />}
       </main>
     </>
   );

@@ -4,11 +4,13 @@ Keeps track of the necessary tasks to complete the challenge.
     ✔ Fix error of importing ts files on the airbnb standard @done(20-11-27 01:53)
     ✔ Check if styled-components is working properly with next.js @done(20-11-27 02:02)
     ✔ Initial commit following Conventional Commits @done(20-11-27 18:27)
+    ✔ Add footer @done(20-11-30 19:08)
+    ☐ Turn the user result into a static render page.
     ☐ Modify styled-components theme to fit the style-guide.md
-    ☐ Add footer
     ☐ Style the app
     ☐ Add page transition (maybe like this https://codepen.io/jcoulterdesign/pen/vqOyLr)
-    ☐ Turn the user result into a static render page.
+    ☐ Make a final README.md
+    ☐ UI tests with Jest and react-testing-library
 
 User Stories
     ✔ User can enter a username @done(20-11-27 20:59)

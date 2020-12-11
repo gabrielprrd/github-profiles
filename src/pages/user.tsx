@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import swal from 'sweetalert2';
 import useFetch from '../hooks/useFetch';
 import UserTopFourRepos from '../components/UserTopFourRepos';
+
+import { QueryContext } from '../context/QueryProvider';
 
 interface User {
   name: string;
@@ -11,14 +13,19 @@ interface User {
   public_repos: number;
 }
 
-const UserPage: React.FC<{ query: string }> = ({ query }): any => {
+const UserPage: React.FC = (): any => {
   const [userFound, setUserFound] = useState<boolean>(false);
-  const { data } = useFetch<User>(`https://api.github.com/users/${query}`);
+  const { query } = useContext(QueryContext);
+
+  const { data: userData } = useFetch<User>(
+    `https://api.github.com/users/${query}`
+  );
 
   // Alert if no user was found or displays the user
   useEffect((): void => {
-    if (data !== undefined) {
-      if (data.message === 'Not Found') {
+    console.log(userData);
+    if (userData !== undefined) {
+      if (userData.message === 'Not Found') {
         swal.fire({
           title: 'Invalid username',
           icon: 'error',
@@ -28,20 +35,20 @@ const UserPage: React.FC<{ query: string }> = ({ query }): any => {
         setUserFound(true);
       }
     }
-  }, [data]);
+  }, [userData]);
   return (
     <>
-      {!data ? (
+      {!userData ? (
         <p>Loading...</p>
       ) : (
         userFound && (
           <>
-            <h1>{data.name}</h1>
-            <p>Username: {data.login}</p>
-            <img src={data.avatar_url} alt="avatar" />
-            <p>Followers:{data.followers}</p>
-            <p>Repositories: {data.public_repos}</p>
-            <UserTopFourRepos query={query} />
+            <h1>{userData.name}</h1>
+            <p>Username: {userData.login}</p>
+            <img src={userData.avatar_url} alt="avatar" />
+            <p>Followers:{userData.followers}</p>
+            <p>Repositories: {userData.public_repos}</p>
+            <UserTopFourRepos />
           </>
         )
       )}
