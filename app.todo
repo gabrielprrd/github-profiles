@@ -6,7 +6,7 @@ Keeps track of the necessary tasks to complete the challenge.
     ✔ Initial commit following Conventional Commits @done(20-11-27 18:27)
     ✔ Add footer @done(20-11-30 19:08)
     ☐ Modify styled-components theme to fit the style-guide.md
-    ☐ Add interesting loading screen instead of simple "loading..." text on swr request
+    ✔ Add interesting loading screen instead of simple "loading..." text on swr request @done(20-12-20 20:27)
     ☐ Style the app
     ☐ Add page transition (maybe like this https://codepen.io/jcoulterwdesign/pen/vqOyLr)
     ☐ Make a final README.md

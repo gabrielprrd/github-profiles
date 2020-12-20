@@ -9,11 +9,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text};
+
+    a {
+      color: ${({ theme }) => theme.colors.text};
+    }
   }
+
 `;
 
 export default GlobalStyle;

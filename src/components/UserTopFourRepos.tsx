@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import useFetch from '../hooks/useFetch';
 
+import LoadingIcon from './LoadingIcon';
+
 // Context
 import { QueryContext } from '../context/QueryProvider';
 
@@ -32,7 +34,7 @@ const UserTopFourRepos: React.FC = (): any => {
   return (
     <>
       {!data ? (
-        <p>Loading...</p>
+        <LoadingIcon />
       ) : (
         topFourRepos.map((repo) => (
           <div>

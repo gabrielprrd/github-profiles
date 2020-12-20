@@ -3,6 +3,7 @@ import swal from 'sweetalert2';
 import useFetch from '../hooks/useFetch';
 import UserTopFourRepos from '../components/UserTopFourRepos';
 
+import LoadingIcon from '../components/LoadingIcon';
 import { QueryContext } from '../context/QueryProvider';
 
 interface User {
@@ -39,7 +40,7 @@ const UserPage: React.FC = (): any => {
   return (
     <>
       {!userData ? (
-        <p>Loading...</p>
+        <LoadingIcon />
       ) : (
         userFound && (
           <>
