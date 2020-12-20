@@ -9,7 +9,6 @@ const TextInput: React.FC<Props> = ({ onChange, placeHolder }) => (
   <input
     type="text"
     onChange={onChange}
-    defaultValue=""
     placeholder={placeHolder}
     data-testid="text-input"
     required

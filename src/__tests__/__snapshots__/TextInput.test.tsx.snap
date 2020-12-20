@@ -3,7 +3,6 @@
 exports[`render TextInput should match snapshot 1`] = `
 <input
   data-testid="text-input"
-  defaultValue=""
   required={true}
   type="text"
 />

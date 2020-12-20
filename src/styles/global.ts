@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background: ${({ theme }) => theme.colors.primary};
   }
 `;
 

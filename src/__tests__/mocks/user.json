@@ -1,0 +1,15 @@
+{
+  "user": [
+    {
+      "blog": "gabrielprrd.github.io",
+      "followers": 6,
+      "following": 6,
+      "location": "Ilha Terceira, Portugal",
+      "login": "gabrielprrd",
+      "name": "Gabriel Afonso",
+      "public_repos": 15,
+      "type": "User",
+      "url": "https://api.github.com/users/gabrielprrd"
+    }
+  ]
+}

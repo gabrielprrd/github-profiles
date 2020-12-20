@@ -11,7 +11,6 @@ Keeps track of the necessary tasks to complete the challenge.
     ☐ Add page transition (maybe like this https://codepen.io/jcoulterwdesign/pen/vqOyLr)
     ☐ Make a final README.md
     ☐ UI tests with Jest and react-testing-library
-    ☐ Add a useRef so the app automatically focus on the input field
     ☐ Turn the user result into a static render page.
 
 User Stories
