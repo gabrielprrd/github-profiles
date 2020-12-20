@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
+import * as S from '../styles/components/Header';
 
 interface Props {
   toggleTheme(): void;
@@ -12,7 +13,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   useEffect(() => setIsMounted(true), []);
 
   return (
-    <header>
+    <S.Header>
       <h1>Github Profiles</h1>
       {isMounted && (
         <Switch
@@ -28,7 +29,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
           id="theme-switcher"
         />
       )}
-    </header>
+    </S.Header>
   );
 };
 
