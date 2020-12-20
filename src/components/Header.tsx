@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 
@@ -8,21 +8,26 @@ interface Props {
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+
   return (
     <header>
       <h1>Github Profiles</h1>
-      <Switch
-        onChange={toggleTheme}
-        checked={title === 'light'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        height={10}
-        width={40}
-        handleDiameter={20}
-        offColor={colors.highlightSecondary}
-        onColor={colors.secondary}
-        id="theme-switcher"
-      />
+      {isMounted && (
+        <Switch
+          onChange={toggleTheme}
+          checked={title === 'light'}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={10}
+          width={40}
+          handleDiameter={20}
+          offColor={colors.highlightSecondary}
+          onColor={colors.secondary}
+          id="theme-switcher"
+        />
+      )}
     </header>
   );
 };
