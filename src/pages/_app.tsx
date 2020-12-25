@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
+
+// Context
 import QueryProvider from '../context/QueryProvider';
 
 // Components
@@ -8,6 +10,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 // Styles
+import PageWrapper from '../styles/components/PageWrapper';
 import GlobalStyle from '../styles/global';
 import dark from '../styles/themes/dark';
 import light from '../styles/themes/light';
@@ -25,10 +28,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <QueryProvider>
-        <Header toggleTheme={toggleTheme} />
-        {isMounted && <Component {...pageProps} />}
-        <GlobalStyle />
-        <Footer />
+        <PageWrapper>
+          <Header toggleTheme={toggleTheme} />
+          {isMounted && <Component {...pageProps} />}
+          <GlobalStyle />
+          <Footer />
+        </PageWrapper>
       </QueryProvider>
     </ThemeProvider>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Head from 'next/head';
 
+import * as S from '../styles/pages/index';
 // Pages
 import UserPage from './user';
 
@@ -32,14 +33,14 @@ const Home: React.FC = () => {
         <title>Homepage</title>
       </Head>
 
-      <main>
+      <S.Main>
         <form onSubmit={handleSubmit} data-testid="form">
           <TextInput placeHolder="Type an username" onChange={handleChange} />
           <SubmitButton label="search" />
         </form>
 
         {isSubmitted && <UserPage />}
-      </main>
+      </S.Main>
     </>
   );
 };

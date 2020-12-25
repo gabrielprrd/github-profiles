@@ -36,11 +36,12 @@ const UserTopFourRepos: React.FC = (): any => {
       {!data ? (
         <LoadingIcon />
       ) : (
-        topFourRepos.map((repo) => (
-          <div>
+        <>
+          <strong>Top Four repositories: </strong>
+          {topFourRepos.map((repo) => (
             <a href={repo.url}>{repo.name}</a>
-          </div>
-        ))
+          ))}
+        </>
       )}
     </>
   );

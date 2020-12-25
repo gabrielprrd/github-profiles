@@ -6,6 +6,8 @@ import UserTopFourRepos from '../components/UserTopFourRepos';
 import LoadingIcon from '../components/LoadingIcon';
 import { QueryContext } from '../context/QueryProvider';
 
+import * as S from '../styles/pages/user';
+
 interface User {
   name: string;
   login: string;
@@ -43,14 +45,25 @@ const UserPage: React.FC = (): any => {
         <LoadingIcon />
       ) : (
         userFound && (
-          <>
-            <h1>{userData.name}</h1>
-            <p>Username: {userData.login}</p>
-            <img src={userData.avatar_url} alt="avatar" />
-            <p>Followers:{userData.followers}</p>
-            <p>Repositories: {userData.public_repos}</p>
-            <UserTopFourRepos />
-          </>
+          <S.UserContainer>
+            <S.ImageContainer>
+              <img src={userData.avatar_url} alt="avatar" />
+            </S.ImageContainer>
+            <S.UserInfoContainer>
+              <h1>{userData.name}</h1>
+              <p>
+                <strong>Username:</strong> {userData.login}
+              </p>
+              <p>
+                <strong>Followers: </strong>
+                {userData.followers}
+              </p>
+              <p>
+                <strong>Repositories:</strong> {userData.public_repos}
+              </p>
+              <UserTopFourRepos />
+            </S.UserInfoContainer>
+          </S.UserContainer>
         )
       )}
     </>
