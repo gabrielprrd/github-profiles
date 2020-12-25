@@ -10,6 +10,8 @@ export const UserContainer = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 70px;
   margin-top: 40px;
+  box-shadow: ${({ theme }) => theme.shadow};
+  z-index: 1;
 `;
 
 export const ImageContainer = styled.div`
@@ -28,4 +30,9 @@ export const ImageContainer = styled.div`
 export const UserInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  p,
+  a {
+    margin-top: 2px;
+  }
 `;

@@ -9,4 +9,5 @@ export default {
   },
   borderRadius: '15px',
   padding: '18px',
+  shadow: '1px 1px 4px #E9E9F9',
 };

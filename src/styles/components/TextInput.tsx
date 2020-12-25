@@ -6,4 +6,6 @@ export const TextInput = styled.input`
   padding: ${({ theme }) => theme.padding};
   background: none;
   color: ${({ theme }) => theme.colors.text};
+  margin: 10px;
+  box-shadow: ${({ theme }) => theme.shadow};
 `;

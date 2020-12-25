@@ -6,14 +6,15 @@ Keeps track of the necessary tasks to complete the challenge.
     ✔ Initial commit following Conventional Commits @done(20-11-27 18:27)
     ✔ Add footer @done(20-11-30 19:08)
     ☐ Add a wrapper on the application so the footer keeps where it belongs
-    ☐ Add typography
-    ☐ Modify styled-components theme to fit the style-guide.md
+    ✔ Add typography @done(20-12-25 23:40)
+    ✔ Modify styled-components theme to fit the style-guide.md @done(20-12-25 23:40)
     ✔ Add interesting loading screen instead of simple "loading..." text on swr request @done(20-12-20 20:27)
-    ☐ Style the app
+    ✔ Style the app @done(20-12-25 23:48)
     ☐ Add page transition (maybe like this https://codepen.io/jcoulterwdesign/pen/vqOyLr)
     ☐ Make a final README.md
     ☐ UI tests with Jest and react-testing-library
     ☐ Turn the user result into a static render page.
+    ☐ Make it responsive.
 
 User Stories
     ✔ User can enter a username @done(20-11-27 20:59)
