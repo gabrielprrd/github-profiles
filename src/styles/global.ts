@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -14,11 +19,14 @@ const GlobalStyle = createGlobalStyle`
     overflow: auto;
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.text};
+    font-family: 'Roboto', sans-serif;
 
     a {
       color: ${({ theme }) => theme.colors.text};
     }
   }
+
+
 
 `;
 
