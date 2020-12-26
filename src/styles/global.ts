@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.text};
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 
     a {
       color: ${({ theme }) => theme.colors.text};

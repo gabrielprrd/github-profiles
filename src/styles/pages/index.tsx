@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../device';
 
 export const Main = styled.main`
   display: flex;
@@ -18,5 +19,9 @@ export const Main = styled.main`
     right: 0;
     bottom: 0;
     z-index: -0;
+  }
+
+  @media ${device.tablet} {
+    padding: 0.8rem;
   }
 `;

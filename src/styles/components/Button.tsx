@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../device';
 
 const Button = styled.button`
   background: ${({ theme }) => theme.colors.secondary};
@@ -9,6 +10,10 @@ const Button = styled.button`
   margin: 10px;
   cursor: pointer;
   box-shadow: ${({ theme }) => theme.shadow};
+
+  @media ${device.tablet} {
+    margin: 0;
+  }
 `;
 
 export default Button;
